@@ -1,6 +1,7 @@
 {
   "name": "js-supportbank-bentleylol86",
   "version": "1.0.0",
+  "type": "module",
   "description": "<p align=\"center\">   <img width=\"200px\" src=\"docs/supportbank-logo.png\" alt=\"Supportbank Logo\" /> </p>",
   "main": "index.js",
   "directories": {
@@ -17,11 +18,14 @@
     "test:d3e1": "mocha ./tests/exercises/day-3-exercise-1.test.js",
     "test:d3e2": "mocha ./tests/exercises/day-3-exercise-2.test.js",
     "test:d3e3": "mocha ./tests/exercises/day-3-exercise-3.test.js"
-  } ,
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "mocha": "^11.0.1"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
   }
 }
