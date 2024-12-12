@@ -1,16 +1,27 @@
+import { isUtf8 } from 'buffer'
 import fs from 'fs/promises'
 
 // Part 1: Read the contents of ./resources/1-hello-world.txt
 export async function readHelloWorld() {
   // The path is provided for you:
   const path = new URL('./resources/1-hello-world.txt', import.meta.url)
+ // Read the contents of the file and return as a UTF-8 string
+ {
+  const data = await fs.readFile(path, 'utf8');
+  return data;
 
-  // TODO: Return the contents of the file as a utf-8 string
 }
+  // TODO: Return the contents of the file as a utf-8 string
 
+}
 // Part 2: Return the contents of ./resources/2-diary-entry.txt
 export async function readDiaryEntry() {
+  const path = new URL('./resources/2-diary-entry.txt', import.meta.url)
   // TODO: Return the contents of the file as a utf-8 string
+  {
+    const data = await fs.readFile(path, 'utf8');
+    return data;
+  }
 }
 
 // Part 3: Overwrite ./resources/3-save-data.txt with saveDataString
@@ -22,6 +33,8 @@ export async function writeSaveData(saveData) {
   const saveDataString = JSON.stringify(saveData)
 
   // TODO: Write the saveData string to the file
+  await fs.writeFile(path, saveDataString, 'utf8');
+  //the fs.writeFile 
 }
 
 // Part 4: Append text to ./resources/4-log-file.txt
