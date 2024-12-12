@@ -8,6 +8,7 @@ export function validateId(id) {
 
   // The id should be a string:
   if (typeof id !== 'string') {
+    throw new Error (`ID ins't a string`)
     // TODO: Add your code to throw an error here
   }
 
